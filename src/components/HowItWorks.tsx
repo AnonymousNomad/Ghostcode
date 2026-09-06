@@ -25,9 +25,12 @@ const HowItWorks: React.FC = () => {
        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
        <div className="relative container mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">How It Works</h2>
-          <p className="mt-4 text-sm font-mono text-slate-400">
-            A three-phase replication pipeline.
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight relative inline-block group">
+            <span className="animate-glitch absolute inset-0 opacity-0 group-hover:opacity-50 text-cyan-400 left-0.5 top-0 bg-transparent bg-clip-text -z-10 blur-[0.5px] transition-opacity">How It Works</span>
+            How It Works
+          </h2>
+          <p className="mt-4 text-sm font-mono text-cyan-400/80">
+            [SYS_LOG] A three-phase replication pipeline.
           </p>
         </div>
 

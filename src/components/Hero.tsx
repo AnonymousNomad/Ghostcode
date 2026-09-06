@@ -26,9 +26,12 @@ const Hero: React.FC<HeroProps> = ({ onWatchDemoClick }) => {
             </span>
             <span>GhostCode is now 100% Open Source</span>
           </div>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-            Clone <span className="text-slate-500 line-through">Production</span> <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-indigo-400 font-mono tracking-tighter">Locally.</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight relative group">
+            Clone <span className="text-slate-500 line-through decoration-rose-500/50">Production</span> <br />
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-cyan-400 font-mono tracking-tighter inline-block relative">
+              <span className="animate-glitch absolute inset-0 opacity-50 text-cyan-400 left-0.5 top-0.5 bg-transparent bg-clip-text -z-10 blur-[1px]">Locally.</span>
+              Locally.
+            </span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-slate-400 font-light leading-relaxed">
             GhostCode is a time-traveling, zero-downtime production debugger. 
@@ -76,7 +79,7 @@ const Hero: React.FC<HeroProps> = ({ onWatchDemoClick }) => {
             <div className="text-slate-500">Synchronizing heap snapshot... [100%]</div>
             <div className="text-emerald-400 mt-2">✔ Zero-pause copy complete (142ms)</div>
             <div className="text-slate-400 mt-2 flex items-center gap-2">
-              <span className="text-indigo-400">Mounting local ghost instance...</span>
+              <span className="text-cyan-400">Mounting local ghost instance...</span>
             </div>
             <div className="mt-4 border-l-2 border-slate-600 pl-4 py-1 text-slate-400">
               <div className="text-slate-300">Port 3001 mapped to Ghost ID #8294</div>

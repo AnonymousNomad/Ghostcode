@@ -70,7 +70,7 @@ const GhostList: React.FC = () => {
                 <button
                     type="button"
                     onClick={() => refetch()}
-                    className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-indigo-500"
+                    className="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2 px-5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-cyan-500"
                 >
                     Retry
                 </button>
@@ -123,7 +123,7 @@ const GhostList: React.FC = () => {
                     <div className="flex items-center justify-end gap-2">
                       <button 
                         onClick={(e) => handleReplayClick(e, ghost.id)}
-                        className="text-indigo-400 hover:text-indigo-300 font-semibold py-1 px-3 rounded-lg transition-colors"
+                        className="text-cyan-400 hover:text-cyan-300 font-semibold py-1 px-3 rounded-lg transition-colors"
                       >
                         Replay
                       </button>
@@ -172,7 +172,7 @@ const GhostList: React.FC = () => {
       <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-4">
         <div>
           <h2 className="text-xl font-bold text-white flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-cyan-400"></span>
+            <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(6,182,212,0.8)] animate-pulse"></span>
             Active Ghost Clones
           </h2>
           <p className="text-slate-400 text-sm mt-1 font-mono">List of currently mounted local debugger instances.</p>

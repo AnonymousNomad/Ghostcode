@@ -22,7 +22,7 @@ const GhostBlueprint: React.FC<GhostBlueprintProps> = ({
     <div className="bg-slate-900/50 border border-slate-700 rounded-lg p-6 space-y-4 h-full flex flex-col justify-center relative overflow-hidden">
         {isCreating && (
             <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm flex flex-col items-center justify-center z-20 animate-fade-in">
-                <span className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-indigo-400 mb-4"></span>
+                <span className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-cyan-400 mb-4"></span>
                 <p className="text-white font-semibold">Capturing Ghost...</p>
                 <p className="text-sm text-slate-400">Please wait.</p>
             </div>
@@ -36,15 +36,15 @@ const GhostBlueprint: React.FC<GhostBlueprintProps> = ({
         {/* Production Service */}
         <div className={`flex flex-col items-center transition-all duration-500 ${serviceIsSet ? 'opacity-100' : 'opacity-30'}`}>
           <p className="text-xs font-semibold text-slate-400 mb-2">PRODUCTION</p>
-          <div className={`relative p-4 rounded-lg border bg-slate-800 transition-all duration-300 ${serviceIsSet ? 'border-indigo-500/50 animate-pulse-glow' : 'border-slate-700'}`}>
-            <CloudServerIcon className="h-10 w-10 text-indigo-400" />
+          <div className={`relative p-4 rounded-lg border bg-slate-800 transition-all duration-300 ${serviceIsSet ? 'border-cyan-500/50 shadow-[0_0_15px_-3px_rgba(6,182,212,0.3)] animate-pulse' : 'border-slate-700'}`}>
+            <CloudServerIcon className="h-10 w-10 text-cyan-400" />
           </div>
           <p className="mt-2 text-xs text-white break-all">{serviceIdentifier || 'your-service.prod'}</p>
         </div>
 
         {/* Connecting line */}
         <div className="w-px h-12 bg-slate-600 relative">
-             <div className={`absolute top-0 left-1/2 -translate-x-1/2 h-full w-0.5 bg-gradient-to-b from-indigo-500 to-cyan-500 transition-all duration-1000 ${isCreating ? 'animate-background-pan [animation-duration:2s]' : ''} ${serviceIsSet ? 'h-full' : 'h-0'}`}></div>
+             <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-0.5 bg-gradient-to-b from-cyan-500 to-emerald-500 transition-all duration-1000 ${isCreating ? 'animate-pulse' : ''} ${serviceIsSet ? 'h-full' : 'h-0'}`}></div>
         </div>
         
         {/* Local Ghost */}

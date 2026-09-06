@@ -59,7 +59,7 @@ const ReplayPage: React.FC = () => {
                         <button
                             type="button"
                             onClick={() => refetch()}
-                            className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-indigo-500"
+                            className="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2 px-5 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-cyan-500"
                         >
                             Retry
                         </button>
@@ -114,7 +114,7 @@ const ReplayPage: React.FC = () => {
                                     key={tab.id}
                                     onClick={() => setActiveTab(tab.id)}
                                     className={`
-                                        ${activeTab === tab.id ? 'bg-indigo-600 text-white' : 'text-slate-300 hover:bg-slate-700 hover:text-white'}
+                                        ${activeTab === tab.id ? 'bg-cyan-600 text-white' : 'text-slate-300 hover:bg-slate-700 hover:text-white'}
                                         px-3 py-2 font-medium text-sm rounded-lg transition-colors flex items-center gap-2
                                     `}
                                     aria-current={activeTab === tab.id ? 'page' : undefined}
@@ -133,7 +133,7 @@ const ReplayPage: React.FC = () => {
                             </button>
                             <button 
                                 onClick={() => setIsPlaying(!isPlaying)}
-                                className="p-3 text-white bg-indigo-600 hover:bg-indigo-500 rounded-full transition-colors"
+                                className="p-3 text-white bg-cyan-600 hover:bg-cyan-500 rounded-full transition-colors shadow-[0_0_15px_-3px_rgba(6,182,212,0.4)]"
                             >
                                 {isPlaying ? <PauseIcon className="h-6 w-6" /> : <PlayIcon className="h-6 w-6" />}
                             </button>
@@ -148,7 +148,7 @@ const ReplayPage: React.FC = () => {
                             max="100"
                             value={progress}
                             onChange={(e) => setProgress(Number(e.target.value))}
-                            className="w-full h-1.5 bg-slate-600 rounded-lg appearance-none cursor-pointer range-sm accent-indigo-500"
+                            className="w-full h-1.5 bg-slate-600 rounded-lg appearance-none cursor-pointer range-sm accent-cyan-500"
                         />
                          <span className="text-xs font-mono text-slate-400">03:59</span>
                     </div>
@@ -165,7 +165,7 @@ const ReplayPage: React.FC = () => {
                 <main className="flex-grow container mx-auto px-6 py-12 flex flex-col">
                    <div className="space-y-6 flex flex-col flex-grow">
                         <div>
-                            <Link to="/dashboard" className="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 transition-colors mb-4">
+                            <Link to="/dashboard" className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors mb-4">
                                 <ArrowLeftIcon className="h-4 w-4" />
                                 <span>Back to Dashboard</span>
                             </Link>

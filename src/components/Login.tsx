@@ -78,7 +78,7 @@ const Login: React.FC = () => {
                 placeholder="you@example.com" 
                 type="email" 
                 required 
-                className={`w-full bg-slate-700/50 border rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-colors ${formErrors.email ? 'border-red-500 focus:ring-red-500' : 'border-slate-600 focus:ring-indigo-500'}`}
+                className={`w-full bg-slate-700/50 border rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-colors ${formErrors.email ? 'border-red-500 focus:ring-red-500' : 'border-slate-600 focus:ring-cyan-500'}`}
                 aria-invalid={!!formErrors.email}
                 aria-describedby="email-error"
             />
@@ -94,7 +94,7 @@ const Login: React.FC = () => {
                 placeholder="••••••••" 
                 type="password" 
                 required 
-                className={`w-full bg-slate-700/50 border rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-colors ${formErrors.password ? 'border-red-500 focus:ring-red-500' : 'border-slate-600 focus:ring-indigo-500'}`}
+                className={`w-full bg-slate-700/50 border rounded-lg px-3 py-2 text-white placeholder-slate-400 focus:outline-none focus:ring-2 transition-colors ${formErrors.password ? 'border-red-500 focus:ring-red-500' : 'border-slate-600 focus:ring-cyan-500'}`}
                 aria-invalid={!!formErrors.password}
                 aria-describedby="password-error"
             />
@@ -103,12 +103,12 @@ const Login: React.FC = () => {
         <button 
             type="submit" 
             disabled={isLoading || !canSubmit}
-            className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold p-2.5 rounded-lg transition-colors disabled:bg-indigo-800 disabled:cursor-not-allowed flex items-center justify-center"
+            className="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold p-2.5 rounded-lg transition-colors disabled:bg-cyan-800 disabled:cursor-not-allowed flex items-center justify-center"
         >
           {isLoading ? <span className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></span> : (isLoginView ? 'Sign In' : 'Create Account')}
         </button>
       </form>
-      <button type="button" onClick={() => { setIsLoginView(!isLoginView); setApiError(null); setFormErrors({}); setTouched({}); }} className="text-sm text-indigo-400 hover:text-indigo-300 w-full mt-4">
+      <button type="button" onClick={() => { setIsLoginView(!isLoginView); setApiError(null); setFormErrors({}); setTouched({}); }} className="text-sm text-cyan-400 hover:text-cyan-300 w-full mt-4">
         {isLoginView ? 'Need an account? Sign up' : 'Already have an account? Sign in'}
       </button>
     </div>

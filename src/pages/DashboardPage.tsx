@@ -4,6 +4,7 @@ import GhostList from '../components/GhostList';
 import Footer from '../components/Footer';
 import LiveSystemBlueprint from '../components/LiveSystemBlueprint';
 import OneClickCloneWizard from '../components/OneClickCloneWizard';
+import { QuickDebugPanel } from '../components/QuickDebugPanel';
 import { SparklesIcon, ChevronDownIcon, ServerIcon, ShieldCheckIcon, CpuChipIcon } from '../constants';
 
 const DashboardPage: React.FC = () => {
@@ -22,14 +23,17 @@ const DashboardPage: React.FC = () => {
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-800">
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-                    <span>System Operational</span>
+                  <span className="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex items-center gap-1.5 relative overflow-hidden group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span className="relative inline-block">
+                      <span className="animate-glitch absolute inset-0 opacity-50 text-emerald-400 left-0.5 top-0 bg-transparent bg-clip-text -z-10 blur-[0.5px]">System Operational</span>
+                      System Operational
+                    </span>
                   </span>
                   <span className="text-xs text-slate-500 font-mono">v2.4.0 Engine</span>
                 </div>
                 <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mt-2">
-                  Production Debugger Dashboard
+                  GhostCode Terminal
                 </h1>
                 <p className="text-slate-400 text-sm mt-1 max-w-2xl">
                   Clone live, running production microservices into time-traveling local debug instances with zero service interruption.
@@ -129,7 +133,7 @@ const DashboardPage: React.FC = () => {
               ) : (
                 <div className="bg-slate-800/50 border border-slate-700/70 rounded-xl p-4 flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-indigo-500"></div>
+                    <div className="w-2 h-2 rounded-full bg-cyan-500"></div>
                     <span className="text-sm text-slate-300">
                       Wizard collapsed. Ready to clone production services with custom URL & credentials.
                     </span>
@@ -137,7 +141,7 @@ const DashboardPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => setIsWizardExpanded(true)}
-                    className="text-xs font-semibold text-indigo-400 hover:text-indigo-300"
+                    className="text-xs font-semibold text-cyan-400 hover:text-cyan-300"
                   >
                     Open Setup Wizard &rarr;
                   </button>
@@ -162,6 +166,8 @@ const DashboardPage: React.FC = () => {
         onClose={() => setIsModalWizardOpen(false)}
         isEmbedded={false}
       />
+      
+      <QuickDebugPanel />
     </div>
   );
 };

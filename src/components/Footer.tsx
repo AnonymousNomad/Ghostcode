@@ -7,9 +7,10 @@ const Footer: React.FC = () => {
     <footer className="border-t border-slate-800">
       <div className="container mx-auto px-6 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-          <div className="flex items-center space-x-2">
-            <GhostIcon className="h-6 w-6 text-indigo-400" />
-            <span className="font-semibold">GhostCode</span>
+          <div className="flex items-center space-x-2 relative group">
+            <span className="animate-pulse absolute inset-0 text-cyan-400 opacity-50 blur-[5px] -z-10 group-hover:opacity-100 transition-opacity"></span>
+            <GhostIcon className="h-6 w-6 text-cyan-400 drop-shadow-[0_0_5px_rgba(6,182,212,0.8)]" />
+            <span className="font-semibold text-slate-200">GhostCode</span>
           </div>
           <div className="flex items-center gap-x-6 gap-y-2 flex-wrap justify-center">
             <p className="text-sm text-slate-500">

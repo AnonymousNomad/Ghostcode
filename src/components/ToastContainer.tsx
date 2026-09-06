@@ -5,7 +5,7 @@ import { CheckCircleIcon, InformationCircleIcon, XMarkIcon } from '../constants'
 const icons = {
   success: <CheckCircleIcon className="h-6 w-6 text-green-400" />,
   error: <XMarkIcon className="h-6 w-6 text-red-400" />,
-  info: <InformationCircleIcon className="h-6 w-6 text-blue-400" />,
+  info: <InformationCircleIcon className="h-6 w-6 text-cyan-400" />,
 };
 
 const ToastContainer: React.FC = () => {

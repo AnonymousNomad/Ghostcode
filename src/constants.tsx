@@ -164,11 +164,11 @@ export const AnimatedPointIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M49 31c0-7.73-6.27-14-14-14s-14 6.27-14 14" className="text-slate-500/80" />
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M35 31c-7.73 0-14 6.27-14 14h28c0-7.73-6.27-14-14-14z" className="text-slate-500/80" />
             {/* Target lines */}
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M35 55V31" className="text-indigo-400/50 transition-all duration-500 group-hover:text-indigo-400" />
-            <circle cx="35" cy="31" r="5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-indigo-400/50 transition-all duration-500 group-hover:text-indigo-400 scale-75 group-hover:scale-100" />
-            <circle cx="35" cy="31" r="10" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-indigo-400/50 opacity-0 transition-all duration-500 group-hover:opacity-100" />
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M35 55V31" className="text-cyan-400/50 transition-all duration-500 group-hover:text-cyan-400" />
+            <circle cx="35" cy="31" r="5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-cyan-400/50 transition-all duration-500 group-hover:text-cyan-400 scale-75 group-hover:scale-100" />
+            <circle cx="35" cy="31" r="10" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="text-cyan-400/50 opacity-0 transition-all duration-500 group-hover:opacity-100" />
             {/* Signal pulse */}
-            <circle cx="35" cy="31" r="2" stroke="currentColor" strokeWidth="2" className="text-indigo-300 animate-signal" style={{ animationDelay: '0.5s' }} />
+            <circle cx="35" cy="31" r="2" stroke="currentColor" strokeWidth="2" className="text-cyan-300 animate-signal" style={{ animationDelay: '0.5s' }} />
         </g>
     </svg>
 );
@@ -182,8 +182,8 @@ export const AnimatedBootIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props)
             <rect width="32" height="20" x="23" y="35" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" rx="2" className="text-slate-500/80" />
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 55h38" className="text-slate-500/80" />
             {/* Data stream */}
-            <path d="M25 28 C 30 40, 40 40, 40 45" stroke="currentColor" strokeWidth="2" strokeDasharray="5" className="text-indigo-400 opacity-0 transition-opacity duration-500 group-hover:opacity-100 animate-background-pan [animation-duration:3s]" />
-             <path d="M25 28 C 35 35, 35 45, 40 45" stroke="currentColor" strokeWidth="2" strokeDasharray="5" className="text-indigo-400 opacity-0 transition-opacity duration-500 group-hover:opacity-100 animate-background-pan [animation-duration:4s]" style={{ animationDelay: '0.2s' }} />
+            <path d="M25 28 C 30 40, 40 40, 40 45" stroke="currentColor" strokeWidth="2" strokeDasharray="5" className="text-cyan-400 opacity-0 transition-opacity duration-500 group-hover:opacity-100 animate-background-pan [animation-duration:3s]" />
+             <path d="M25 28 C 35 35, 35 45, 40 45" stroke="currentColor" strokeWidth="2" strokeDasharray="5" className="text-cyan-400 opacity-0 transition-opacity duration-500 group-hover:opacity-100 animate-background-pan [animation-duration:4s]" style={{ animationDelay: '0.2s' }} />
         </g>
     </svg>
 );
@@ -195,9 +195,9 @@ export const AnimatedDebugIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 32H54" className="text-slate-500/80" />
             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18 28v8M32 28v8M46 28v8" className="text-slate-500/80" />
             {/* Scrubber */}
-            <circle cx="32" cy="32" r="5" fill="currentColor" className="text-indigo-400 transition-transform duration-700 ease-in-out group-hover:translate-x-[-14px]" />
+            <circle cx="32" cy="32" r="5" fill="currentColor" className="text-cyan-400 transition-transform duration-700 ease-in-out group-hover:translate-x-[-14px]" />
             {/* Rewind Icon path */}
-            <path d="M32 20 L22 32 L32 44" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-indigo-400 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-translate-x-2" />
+            <path d="M32 20 L22 32 L32 44" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan-400 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:-translate-x-2" />
         </g>
     </svg>
 );

@@ -25,9 +25,13 @@ const Header: React.FC = () => {
     <header className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-sm border-b border-slate-700/50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2 text-xl font-bold text-white">
-            <GhostIcon className="h-7 w-7 text-indigo-400" />
-            <span>GhostCode</span>
+          <Link to="/" className="flex items-center space-x-2 text-xl font-bold text-white relative group">
+            <span className="animate-pulse absolute inset-0 text-cyan-400 opacity-50 blur-[5px] -z-10 group-hover:opacity-100 transition-opacity"></span>
+            <GhostIcon className="h-7 w-7 text-cyan-400 drop-shadow-[0_0_5px_rgba(6,182,212,0.8)]" />
+            <span className="relative">
+              <span className="animate-glitch absolute inset-0 opacity-0 group-hover:opacity-50 text-cyan-400 left-0.5 top-0 bg-transparent bg-clip-text -z-10 blur-[0.5px] transition-opacity">GhostCode</span>
+              GhostCode
+            </span>
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -48,13 +52,13 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             {token ? (
               <>
-                <Link to="/dashboard" className="text-slate-300 hover:text-white font-medium py-2 px-4 rounded-lg transition-colors">Dashboard</Link>
-                <button onClick={logout} className="bg-slate-700/50 hover:bg-slate-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors">Logout</button>
+                <Link to="/dashboard" className="text-slate-300 hover:text-cyan-400 font-medium py-2 px-4 rounded-lg transition-colors">Dashboard</Link>
+                <button onClick={logout} className="bg-slate-800 border border-slate-700 hover:bg-slate-700 text-slate-300 font-semibold py-2 px-4 rounded-lg transition-colors shadow-sm">Logout</button>
               </>
             ) : (
               <>
-                <Link to="/login" className="text-slate-300 hover:text-white font-medium py-2 px-4 rounded-lg transition-colors">Log In</Link>
-                <Link to="/login" className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors">Sign Up</Link>
+                <Link to="/login" className="text-slate-300 hover:text-cyan-400 font-medium py-2 px-4 rounded-lg transition-colors">Log In</Link>
+                <Link to="/login" className="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors shadow-[0_0_15px_-3px_rgba(6,182,212,0.4)]">Sign Up</Link>
               </>
             )}
           </div>
@@ -81,13 +85,13 @@ const Header: React.FC = () => {
               <div className="w-full border-t border-slate-700 my-2"></div>
               {token ? (
                 <>
-                  <Link to="/dashboard" className="text-slate-300 hover:text-white w-full text-center">Dashboard</Link>
-                  <button onClick={logout} className="bg-slate-700/50 hover:bg-slate-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full">Logout</button>
+                  <Link to="/dashboard" className="text-slate-300 hover:text-cyan-400 w-full text-center">Dashboard</Link>
+                  <button onClick={logout} className="bg-slate-800 border border-slate-700 hover:bg-slate-700 text-slate-300 font-semibold py-2 px-4 rounded-lg transition-colors w-full shadow-sm">Logout</button>
                 </>
               ) : (
                 <>
-                  <Link to="/login" className="text-slate-300 hover:text-white w-full text-center">Log In</Link>
-                  <Link to="/login" className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full text-center">Sign Up</Link>
+                  <Link to="/login" className="text-slate-300 hover:text-cyan-400 w-full text-center">Log In</Link>
+                  <Link to="/login" className="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2 px-4 rounded-lg transition-colors w-full text-center shadow-[0_0_15px_-3px_rgba(6,182,212,0.4)]">Sign Up</Link>
                 </>
               )}
             </div>

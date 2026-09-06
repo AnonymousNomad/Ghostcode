@@ -206,13 +206,13 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
           onClick={() => !cloneMutation.isPending && setCurrentStep(1)}
           className={`flex items-center gap-2 pb-1 border-b-2 transition-colors whitespace-nowrap ${
             currentStep === 1
-              ? 'border-indigo-500 text-indigo-400 font-semibold'
+              ? 'border-cyan-500 text-cyan-400 font-semibold'
               : currentStep > 1
               ? 'border-transparent text-slate-300 hover:text-white'
               : 'border-transparent text-slate-500'
           }`}
         >
-          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${currentStep > 1 ? 'bg-indigo-600 text-white' : currentStep === 1 ? 'bg-indigo-500/20 text-indigo-300 border border-indigo-500' : 'bg-slate-700 text-slate-400'}`}>
+          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${currentStep > 1 ? 'bg-cyan-600 text-white' : currentStep === 1 ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500' : 'bg-slate-700 text-slate-400'}`}>
             1
           </span>
           <span>Target Service</span>
@@ -225,13 +225,13 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
           onClick={() => !cloneMutation.isPending && setCurrentStep(2)}
           className={`flex items-center gap-2 pb-1 border-b-2 transition-colors whitespace-nowrap ${
             currentStep === 2
-              ? 'border-indigo-500 text-indigo-400 font-semibold'
+              ? 'border-cyan-500 text-cyan-400 font-semibold'
               : currentStep > 2
               ? 'border-transparent text-slate-300 hover:text-white'
               : 'border-transparent text-slate-500'
           }`}
         >
-          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${currentStep > 2 ? 'bg-indigo-600 text-white' : currentStep === 2 ? 'bg-indigo-500/20 text-indigo-300 border border-indigo-500' : 'bg-slate-700 text-slate-400'}`}>
+          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${currentStep > 2 ? 'bg-cyan-600 text-white' : currentStep === 2 ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500' : 'bg-slate-700 text-slate-400'}`}>
             2
           </span>
           <span>Auth & Credentials</span>
@@ -244,13 +244,13 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
           onClick={() => !cloneMutation.isPending && setCurrentStep(3)}
           className={`flex items-center gap-2 pb-1 border-b-2 transition-colors whitespace-nowrap ${
             currentStep === 3
-              ? 'border-indigo-500 text-indigo-400 font-semibold'
+              ? 'border-cyan-500 text-cyan-400 font-semibold'
               : currentStep > 3
               ? 'border-transparent text-slate-300 hover:text-white'
               : 'border-transparent text-slate-500'
           }`}
         >
-          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${currentStep > 3 ? 'bg-indigo-600 text-white' : currentStep === 3 ? 'bg-indigo-500/20 text-indigo-300 border border-indigo-500' : 'bg-slate-700 text-slate-400'}`}>
+          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${currentStep > 3 ? 'bg-cyan-600 text-white' : currentStep === 3 ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500' : 'bg-slate-700 text-slate-400'}`}>
             3
           </span>
           <span>Clone Specs</span>
@@ -261,18 +261,18 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
         <div
           className={`flex items-center gap-2 pb-1 border-b-2 transition-colors whitespace-nowrap ${
             currentStep === 4
-              ? 'border-indigo-500 text-indigo-400 font-semibold'
+              ? 'border-cyan-500 text-cyan-400 font-semibold'
               : 'border-transparent text-slate-500'
           }`}
         >
-          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${currentStep === 4 ? 'bg-indigo-500/20 text-indigo-300 border border-indigo-500' : 'bg-slate-700 text-slate-400'}`}>
+          <span className={`w-5 h-5 rounded-full flex items-center justify-center text-xs ${currentStep === 4 ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500' : 'bg-slate-700 text-slate-400'}`}>
             4
           </span>
           <span>1-Click Deploy</span>
         </div>
       </div>
 
-      <div className="hidden sm:flex items-center gap-2 text-xs text-indigo-400/90 font-mono bg-indigo-950/50 px-2.5 py-1 rounded-md border border-indigo-800/40">
+      <div className="hidden sm:flex items-center gap-2 text-xs text-cyan-400/90 font-mono bg-cyan-950/50 px-2.5 py-1 rounded-md border border-cyan-800/40">
         <SparklesIcon className="w-3.5 h-3.5" />
         <span>1-Click Zero Downtime</span>
       </div>
@@ -297,7 +297,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
         {/* Header */}
         <div className="p-6 border-b border-slate-700/70 flex justify-between items-start bg-slate-800/90">
           <div className="flex items-center gap-3">
-            <div className="p-2.5 rounded-xl bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 border border-indigo-500/30 text-indigo-400">
+            <div className="p-2.5 rounded-xl bg-gradient-to-br from-cyan-500/20 to-cyan-500/20 border border-cyan-500/30 text-cyan-400">
               <SparklesIcon className="h-6 w-6" />
             </div>
             <div>
@@ -305,7 +305,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                 <h2 className="text-xl font-bold text-white tracking-tight">
                   1-Click Clone Setup Wizard
                 </h2>
-                <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                   Live Mirror
                 </span>
               </div>
@@ -352,7 +352,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                       onClick={() => applyPreset(p)}
                       className={`text-left p-3 rounded-lg border text-xs transition-all ${
                         serviceUrl === p.url
-                          ? 'border-indigo-500 bg-indigo-950/40 text-white shadow-sm'
+                          ? 'border-cyan-500 bg-cyan-950/40 text-white shadow-sm'
                           : 'border-slate-700/80 bg-slate-800/60 text-slate-300 hover:border-slate-600 hover:bg-slate-700/40'
                       }`}
                     >
@@ -381,7 +381,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                       value={cloneName}
                       onChange={(e) => setCloneName(e.target.value)}
                       placeholder="e.g., checkout-api-debug-session"
-                      className="w-full bg-slate-900/60 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                      className="w-full bg-slate-900/60 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
                     />
                   </div>
                   <p className="text-xs text-slate-500 mt-1">
@@ -406,7 +406,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                               ? 'bg-rose-950/40 border-rose-500/80 text-rose-300'
                               : env === 'canary'
                               ? 'bg-amber-950/40 border-amber-500/80 text-amber-300'
-                              : 'bg-indigo-950/40 border-indigo-500/80 text-indigo-300'
+                              : 'bg-cyan-950/40 border-cyan-500/80 text-cyan-300'
                             : 'bg-slate-900/40 border-slate-700 text-slate-400 hover:text-slate-200'
                         }`}
                       >
@@ -442,11 +442,11 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                     }}
                     placeholder="https://service-name.internal.domain:8443 or k8s://namespace/pod-name"
                     required
-                    className="w-full pl-11 pr-4 bg-slate-900/60 border border-slate-700 rounded-lg py-2.5 text-white placeholder-slate-500 font-mono text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                    className="w-full pl-11 pr-4 bg-slate-900/60 border border-slate-700 rounded-lg py-2.5 text-white placeholder-slate-500 font-mono text-sm focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
                   />
                 </div>
                 <p className="text-xs text-slate-400 mt-1.5 flex items-center gap-1.5">
-                  <InformationCircleIcon className="h-4 w-4 text-indigo-400 shrink-0" />
+                  <InformationCircleIcon className="h-4 w-4 text-cyan-400 shrink-0" />
                   <span>GhostCode will connect via read-only telemetry bridge without taking the service offline.</span>
                 </p>
               </div>
@@ -457,7 +457,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                   type="button"
                   onClick={() => setCurrentStep(2)}
                   disabled={!serviceUrl.trim()}
-                  className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2.5 px-6 rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+                  className="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2.5 px-6 rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
                 >
                   <span>Continue to Credentials</span>
                   <span>&rarr;</span>
@@ -491,7 +491,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                       }}
                       className={`py-2 px-3 rounded-lg text-xs font-semibold border transition-all text-center ${
                         authType === scheme.id
-                          ? 'bg-indigo-600 border-indigo-500 text-white shadow-sm'
+                          ? 'bg-cyan-600 border-cyan-500 text-white shadow-sm'
                           : 'bg-slate-900/50 border-slate-700 text-slate-300 hover:bg-slate-700/40'
                       }`}
                     >
@@ -513,7 +513,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                       <button
                         type="button"
                         onClick={() => setShowSecret(!showSecret)}
-                        className="text-xs text-indigo-400 hover:text-indigo-300 flex items-center gap-1"
+                        className="text-xs text-cyan-400 hover:text-cyan-300 flex items-center gap-1"
                       >
                         {showSecret ? (
                           <>
@@ -541,7 +541,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                           setProbeResult({ status: 'idle' });
                         }}
                         placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9... or gh_sec_token"
-                        className="w-full pl-11 pr-4 bg-slate-800 border border-slate-700 rounded-lg py-2.5 text-white font-mono text-sm placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                        className="w-full pl-11 pr-4 bg-slate-800 border border-slate-700 rounded-lg py-2.5 text-white font-mono text-sm placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500"
                       />
                     </div>
                     <p className="text-xs text-slate-500 mt-1">
@@ -566,7 +566,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                           setProbeResult({ status: 'idle' });
                         }}
                         placeholder="admin or svc_ghostcode"
-                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-indigo-500"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-cyan-500"
                       />
                     </div>
                     <div>
@@ -582,7 +582,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                           setProbeResult({ status: 'idle' });
                         }}
                         placeholder="••••••••••••••••"
-                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-indigo-500"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-cyan-500"
                       />
                     </div>
                   </div>
@@ -604,7 +604,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                           setProbeResult({ status: 'idle' });
                         }}
                         placeholder="-----BEGIN CERTIFICATE-----&#10;MIIDXTCCAkWgAwIBAgIUQ...&#10;-----END CERTIFICATE-----"
-                        className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white font-mono text-xs focus:outline-none focus:border-indigo-500"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white font-mono text-xs focus:outline-none focus:border-cyan-500"
                       />
                     </div>
                     <div>
@@ -620,7 +620,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                           setProbeResult({ status: 'idle' });
                         }}
                         placeholder="-----BEGIN PRIVATE KEY-----&#10;MIIEvgIBADANBgkqhkiG9w0BAQEFAASC...&#10;-----END PRIVATE KEY-----"
-                        className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white font-mono text-xs focus:outline-none focus:border-indigo-500"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-lg p-3 text-white font-mono text-xs focus:outline-none focus:border-cyan-500"
                       />
                     </div>
                   </div>
@@ -641,7 +641,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                         setProbeResult({ status: 'idle' });
                       }}
                       placeholder="arn:aws:iam::123456789012:role/GhostCodeCloneOperator"
-                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white font-mono text-sm focus:outline-none focus:border-indigo-500"
+                      className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white font-mono text-sm focus:outline-none focus:border-cyan-500"
                     />
                     <p className="text-xs text-slate-500 mt-1">
                       Assumes STS WebIdentity or OIDC federated token exchange to acquire ephemeral read-only session.
@@ -665,7 +665,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                           setProbeResult({ status: 'idle' });
                         }}
                         placeholder="X-API-Key or X-Service-Token"
-                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-indigo-500"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-cyan-500"
                       />
                     </div>
                     <div>
@@ -681,7 +681,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                           setProbeResult({ status: 'idle' });
                         }}
                         placeholder="key_live_94827104817"
-                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-indigo-500"
+                        className="w-full bg-slate-800 border border-slate-700 rounded-lg px-3.5 py-2.5 text-white text-sm focus:outline-none focus:border-cyan-500"
                       />
                     </div>
                   </div>
@@ -691,7 +691,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                 <div className="pt-2">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-slate-800/80 p-3 rounded-lg border border-slate-700/60">
                     <div className="flex items-center gap-2">
-                      <ShieldCheckIcon className="h-5 w-5 text-indigo-400" />
+                      <ShieldCheckIcon className="h-5 w-5 text-cyan-400" />
                       <div>
                         <p className="text-xs font-semibold text-white">Live Connection & Auth Probe</p>
                         <p className="text-[11px] text-slate-400">Verifies TLS handshake, scopes, and latency before cloning.</p>
@@ -701,7 +701,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                       type="button"
                       onClick={handleTestConnection}
                       disabled={isTestingProbe}
-                      className="bg-slate-700 hover:bg-slate-600 text-indigo-300 font-semibold py-1.5 px-4 rounded-md text-xs transition-colors flex items-center justify-center gap-2 border border-slate-600 disabled:opacity-50"
+                      className="bg-slate-700 hover:bg-slate-600 text-cyan-300 font-semibold py-1.5 px-4 rounded-md text-xs transition-colors flex items-center justify-center gap-2 border border-slate-600 disabled:opacity-50"
                     >
                       <ArrowPathIcon className={`h-3.5 w-3.5 ${isTestingProbe ? 'animate-spin' : ''}`} />
                       <span>{isTestingProbe ? 'Probing Target...' : 'Test Connection & Scope'}</span>
@@ -783,11 +783,11 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                       onClick={() => setCaptureDepth('full')}
                       className={`p-3 rounded-lg border text-left transition-colors ${
                         captureDepth === 'full'
-                          ? 'bg-indigo-950/50 border-indigo-500 text-white'
+                          ? 'bg-cyan-950/50 border-cyan-500 text-white'
                           : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'
                       }`}
                     >
-                      <div className="font-semibold text-xs text-indigo-300">Full Memory State</div>
+                      <div className="font-semibold text-xs text-cyan-300">Full Memory State</div>
                       <p className="text-[11px] text-slate-400 mt-1">
                         Heap snapshot, call-stacks, live TCP connections (Recommended).
                       </p>
@@ -797,7 +797,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                       onClick={() => setCaptureDepth('shallow')}
                       className={`p-3 rounded-lg border text-left transition-colors ${
                         captureDepth === 'shallow'
-                          ? 'bg-indigo-950/50 border-indigo-500 text-white'
+                          ? 'bg-cyan-950/50 border-cyan-500 text-white'
                           : 'bg-slate-800/60 border-slate-700 text-slate-400 hover:text-white'
                       }`}
                     >
@@ -829,7 +829,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                         max="65535"
                         value={localPort}
                         onChange={(e) => setLocalPort(Number(e.target.value) || 3001)}
-                        className="w-full pl-20 pr-3 bg-slate-800 border border-slate-700 rounded-lg py-2 text-white font-mono text-sm focus:outline-none focus:border-indigo-500"
+                        className="w-full pl-20 pr-3 bg-slate-800 border border-slate-700 rounded-lg py-2 text-white font-mono text-sm focus:outline-none focus:border-cyan-500"
                       />
                     </div>
                     <span className="text-xs font-semibold px-2 py-1 rounded bg-emerald-950/60 text-emerald-400 border border-emerald-800/50">
@@ -870,7 +870,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                 {/* Include Environment Variables */}
                 <div className="flex items-center justify-between py-1">
                   <div className="flex items-center gap-2.5">
-                    <LayersIcon className="h-5 w-5 text-indigo-400 shrink-0" />
+                    <LayersIcon className="h-5 w-5 text-cyan-400 shrink-0" />
                     <div>
                       <p className="text-sm font-medium text-white">Include Environment & Config Map</p>
                       <p className="text-xs text-slate-400">
@@ -885,7 +885,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                       onChange={(e) => setIncludeEnvVars(e.target.checked)}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-600"></div>
+                    <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-600"></div>
                   </label>
                 </div>
 
@@ -915,23 +915,23 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
               </div>
 
               {/* Ready Summary Banner */}
-              <div className="p-4 rounded-xl bg-gradient-to-r from-indigo-950/60 via-slate-800/80 to-cyan-950/60 border border-indigo-500/30 flex flex-col sm:flex-row items-center justify-between gap-3">
+              <div className="p-4 rounded-xl bg-gradient-to-r from-cyan-950/60 via-slate-800/80 to-cyan-950/60 border border-cyan-500/30 flex flex-col sm:flex-row items-center justify-between gap-3">
                 <div>
                   <div className="flex items-center gap-2">
                     <span className="font-semibold text-sm text-white">Ready for 1-Click Clone</span>
-                    <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-indigo-500 text-white">
+                    <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-cyan-500 text-white">
                       Zero Downtime
                     </span>
                   </div>
                   <p className="text-xs text-slate-300 mt-1">
-                    Target: <code className="text-indigo-300 font-mono">{serviceUrl}</code> &rarr; Local Port{' '}
+                    Target: <code className="text-cyan-300 font-mono">{serviceUrl}</code> &rarr; Local Port{' '}
                     <code className="text-cyan-300 font-mono">:{localPort}</code>
                   </p>
                 </div>
                 <button
                   type="button"
                   onClick={handleExecuteClone}
-                  className="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-bold py-2.5 px-6 rounded-lg text-sm shadow-lg shadow-indigo-600/30 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
+                  className="w-full sm:w-auto bg-gradient-to-r from-cyan-600 to-cyan-600 hover:from-cyan-500 hover:to-cyan-500 text-white font-bold py-2.5 px-6 rounded-lg text-sm shadow-lg shadow-cyan-600/30 transition-all flex items-center justify-center gap-2 whitespace-nowrap"
                 >
                   <SparklesIcon className="h-4 w-4" />
                   <span>Execute 1-Click Clone</span>
@@ -957,7 +957,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
               {cloneMutation.isPending && (
                 <div className="text-center py-8 space-y-6">
                   <div className="relative inline-flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full border-4 border-slate-700 border-t-indigo-500 animate-spin"></div>
+                    <div className="w-20 h-20 rounded-full border-4 border-slate-700 border-t-cyan-500 animate-spin"></div>
                     <SparklesIcon className="absolute w-8 h-8 text-cyan-400 animate-pulse" />
                   </div>
 
@@ -965,7 +965,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                     <h3 className="text-lg font-bold text-white">
                       Synthesizing 1-Click Clone...
                     </h3>
-                    <p className="text-sm text-indigo-300 font-mono mt-1 animate-pulse">
+                    <p className="text-sm text-cyan-300 font-mono mt-1 animate-pulse">
                       {cloneProgressText}
                     </p>
                   </div>
@@ -974,7 +974,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                   <div className="max-w-md mx-auto">
                     <div className="h-2 w-full bg-slate-700 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-indigo-500 to-cyan-400 transition-all duration-300 rounded-full"
+                        className="h-full bg-gradient-to-r from-cyan-500 to-cyan-400 transition-all duration-300 rounded-full"
                         style={{ width: `${clonePercent}%` }}
                       ></div>
                     </div>
@@ -1044,7 +1044,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                           if (onClose) onClose();
                           navigate(`/replay/${createdGhostId}`);
                         }}
-                        className="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2.5 px-6 rounded-lg text-sm shadow-md transition-colors flex items-center justify-center gap-2"
+                        className="w-full sm:w-auto bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2.5 px-6 rounded-lg text-sm shadow-md transition-colors flex items-center justify-center gap-2"
                       >
                         <PlayIcon className="h-4 w-4" />
                         <span>Launch Time-Travel Replay</span>
@@ -1093,7 +1093,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
                         setCurrentStep(2);
                         cloneMutation.reset();
                       }}
-                      className="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2 px-5 rounded-lg text-sm"
+                      className="bg-cyan-600 hover:bg-cyan-500 text-white font-semibold py-2 px-5 rounded-lg text-sm"
                     >
                       Check Credentials & Retry
                     </button>

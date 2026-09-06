@@ -8,7 +8,7 @@ const features = [
     description: 'Scrub backwards and forwards through your process execution. Inspect variables at any historical tick without rebuilding.'
   },
   {
-    icon: <LayersIcon className="h-6 w-6 text-indigo-400 group-hover:animate-pulse" />,
+    icon: <LayersIcon className="h-6 w-6 text-cyan-400 group-hover:animate-pulse" />,
     title: '100% State Fidelity',
     description: 'Byte-for-byte mirroring of heap memory, active sockets, and file descriptors. Eradicate "works on my machine".'
   },
@@ -42,9 +42,12 @@ const Features: React.FC = () => {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight">The Anatomy of a Ghost</h2>
-          <p className="mt-4 text-slate-400 font-mono text-sm">
-            Core modules powering the GhostCode execution engine.
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight relative inline-block group">
+            <span className="animate-glitch absolute inset-0 opacity-0 group-hover:opacity-50 text-cyan-400 left-0.5 top-0 bg-transparent bg-clip-text -z-10 blur-[0.5px] transition-opacity">The Anatomy of a Ghost</span>
+            The Anatomy of a Ghost
+          </h2>
+          <p className="mt-4 text-cyan-400/80 font-mono text-sm">
+            [SYS_LOG] Core modules powering the GhostCode execution engine.
           </p>
         </div>
         <div className="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
