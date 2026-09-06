@@ -5,7 +5,8 @@ import Footer from '../components/Footer';
 import LiveSystemBlueprint from '../components/LiveSystemBlueprint';
 import OneClickCloneWizard from '../components/OneClickCloneWizard';
 import { QuickDebugPanel } from '../components/QuickDebugPanel';
-import { SparklesIcon, ChevronDownIcon, ServerIcon, ShieldCheckIcon, CpuChipIcon } from '../constants';
+import { LiveTerminal } from '../components/LiveTerminal';
+import { SparklesIcon, ChevronDownIcon, ServerIcon, ShieldCheckIcon, CpuChipIcon, TerminalIcon } from '../constants';
 
 const DashboardPage: React.FC = () => {
   const [isWizardExpanded, setIsWizardExpanded] = useState(true);
@@ -94,6 +95,24 @@ const DashboardPage: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* Phase 1: Live Telemetry Terminal */}
+            <section aria-labelledby="telemetry-heading" className="space-y-3">
+               <div className="flex items-center gap-2.5">
+                  <div className="p-1.5 rounded-md bg-cyan-500/20 border border-cyan-500/30 text-cyan-400">
+                    <TerminalIcon className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <h2 id="telemetry-heading" className="text-lg font-bold text-white">
+                      Live Production Telemetry
+                    </h2>
+                    <p className="text-xs text-slate-400 font-mono">
+                      Streaming request logs from production mesh before ghost interception.
+                    </p>
+                  </div>
+                </div>
+                <LiveTerminal />
+            </section>
 
             {/* Embedded 1-Click Clone Setup Wizard on Dashboard */}
             <section aria-labelledby="wizard-heading" className="space-y-3">
