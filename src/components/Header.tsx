@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { GhostIcon } from '../constants';
+import { GhostIcon, ShieldCheckIcon } from '../constants';
 import { useAuth } from '../auth/AuthContext';
 
 const Header: React.FC = () => {
@@ -52,6 +52,10 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-4">
             {token ? (
               <>
+                <Link to="/security" className="text-slate-300 hover:text-cyan-400 font-medium py-2 px-2 transition-colors flex items-center gap-1.5 text-sm">
+                  <ShieldCheckIcon className="h-4 w-4" />
+                  Shield Matrix
+                </Link>
                 <Link to="/dashboard" className="text-slate-300 hover:text-cyan-400 font-medium py-2 px-4 rounded-lg transition-colors">Dashboard</Link>
                 <button onClick={logout} className="bg-slate-800 border border-slate-700 hover:bg-slate-700 text-slate-300 font-semibold py-2 px-4 rounded-lg transition-colors shadow-sm">Logout</button>
               </>
@@ -85,6 +89,7 @@ const Header: React.FC = () => {
               <div className="w-full border-t border-slate-700 my-2"></div>
               {token ? (
                 <>
+                  <Link to="/security" className="text-slate-300 hover:text-cyan-400 w-full text-center flex items-center justify-center gap-1.5"><ShieldCheckIcon className="h-4 w-4" /> Shield Matrix</Link>
                   <Link to="/dashboard" className="text-slate-300 hover:text-cyan-400 w-full text-center">Dashboard</Link>
                   <button onClick={logout} className="bg-slate-800 border border-slate-700 hover:bg-slate-700 text-slate-300 font-semibold py-2 px-4 rounded-lg transition-colors w-full shadow-sm">Logout</button>
                 </>

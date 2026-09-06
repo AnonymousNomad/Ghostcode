@@ -105,7 +105,7 @@ export const QuickDebugPanel: React.FC = () => {
           <>
             <div>
               <label htmlFor="quick-url" className="block text-xs font-medium text-slate-400 mb-1.5">Target Service URL</label>
-              <div className="relative">
+              <div className="relative mb-3">
                 <input
                   id="quick-url"
                   type="text"
@@ -118,7 +118,10 @@ export const QuickDebugPanel: React.FC = () => {
                   PROD
                 </div>
               </div>
-              <p className="text-[10px] text-slate-500 mt-1.5">Uses default 'gh_quick_sec' token</p>
+              <div className="flex items-center gap-1.5 p-2 rounded bg-cyan-900/20 border border-cyan-800/30">
+                <div className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse"></div>
+                <span className="text-[10px] text-cyan-300 font-mono uppercase">Shield Matrix Enforcement Active</span>
+              </div>
             </div>
             <button
               onClick={() => cloneMutation.mutate()}

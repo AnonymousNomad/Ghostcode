@@ -17,6 +17,7 @@ import {
   PlayIcon,
   ClipboardDocumentCheckIcon,
   LayersIcon,
+  VariableIcon
 } from '../constants';
 import { testServiceConnection, oneClickCloneService } from '../api';
 import { AuthType, EnvironmentType, AuthCredentials, ConnectionProbeResult } from '../types';
@@ -100,7 +101,7 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
   const [showSecret, setShowSecret] = useState(false);
   const [captureDepth, setCaptureDepth] = useState<'full' | 'shallow'>('full');
   const [includeEnvVars, setIncludeEnvVars] = useState(true);
-  const [sanitizePii, setSanitizePii] = useState(true);
+  const sanitizePii = true;
   const [localPort, setLocalPort] = useState(3001);
   const [mockExternalApis, setMockExternalApis] = useState(true);
 
@@ -842,26 +843,54 @@ export const OneClickCloneWizard: React.FC<OneClickCloneWizardProps> = ({
               {/* Toggles & Sanitization */}
               <div className="space-y-3 bg-slate-900/50 border border-slate-700/80 rounded-xl p-4">
                 {/* PII Sanitizer */}
-                <div className="flex items-center justify-between py-1">
+                <div className="flex items-center justify-between py-1 border-b border-slate-800 pb-3 mb-2 relative">
+                  <div className="absolute inset-0 bg-cyan-900/5 mix-blend-screen pointer-events-none rounded"></div>
                   <div className="flex items-center gap-2.5">
-                    <ShieldCheckIcon className="h-5 w-5 text-emerald-400 shrink-0" />
+                    <div className="p-1.5 bg-cyan-500/20 rounded-md border border-cyan-500/30">
+                      <ShieldCheckIcon className="h-5 w-5 text-cyan-400 shrink-0" />
+                    </div>
                     <div>
-                      <p className="text-sm font-medium text-white">
-                        Sanitize PII, Credit Cards, & Secret Tokens
+                      <p className="text-sm font-medium text-white flex items-center gap-2">
+                        Data Sanitization Shield Active
+                        <span className="text-[9px] uppercase tracking-wide bg-cyan-900 text-cyan-300 px-1.5 py-0.5 rounded font-bold">Required</span>
                       </p>
                       <p className="text-xs text-slate-400">
-                        Automatically redacts sensitive end-user customer data before storing the snapshot locally.
+                        PII and Secrets will be scrubbed at the gateway before streaming to the local sandbox based on the active Shield Matrix rules.
+                      </p>
+                    </div>
+                  </div>
+                  <label className="relative inline-flex items-center cursor-not-allowed">
+                    <input
+                      type="checkbox"
+                      checked={true}
+                      disabled={true}
+                      className="sr-only peer"
+                    />
+                    <div className="w-9 h-5 bg-cyan-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all"></div>
+                  </label>
+                </div>
+
+                {/* Env Vars */}
+                <div className="flex items-center justify-between py-1">
+                  <div className="flex items-center gap-2.5">
+                    <VariableIcon className="h-5 w-5 text-indigo-400 shrink-0" />
+                    <div>
+                      <p className="text-sm font-medium text-white">
+                        Clone Environment Variables
+                      </p>
+                      <p className="text-xs text-slate-400">
+                        Pulls latest non-secret ConfigMaps for the target environment.
                       </p>
                     </div>
                   </div>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input
                       type="checkbox"
-                      checked={sanitizePii}
-                      onChange={(e) => setSanitizePii(e.target.checked)}
+                      checked={includeEnvVars}
+                      onChange={(e) => setIncludeEnvVars(e.target.checked)}
                       className="sr-only peer"
                     />
-                    <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+                    <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-600"></div>
                   </label>
                 </div>
 

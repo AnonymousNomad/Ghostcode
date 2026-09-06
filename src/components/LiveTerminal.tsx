@@ -64,6 +64,7 @@ const generateMockLog = (): LogEntry => {
 export const LiveTerminal: React.FC = () => {
   const [logs, setLogs] = useState<LogEntry[]>([]);
   const [isPaused, setIsPaused] = useState(false);
+  const [isSanitized, setIsSanitized] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -104,10 +105,29 @@ export const LiveTerminal: React.FC = () => {
     }
   };
 
+  const renderPayload = (payload: string) => {
+    if (!isSanitized) return payload;
+    
+    // Simulate regex sanitization
+    let scrubbed = payload;
+    // Mask emails, IDs, tokens, IPs
+    scrubbed = scrubbed.replace(/"id":"[^"]+"/g, '"id":"[REDACTED]"');
+    scrubbed = scrubbed.replace(/"email":"[^"]+"/g, '"email":"[REDACTED]"');
+    scrubbed = scrubbed.replace(/"token":"[^"]+"/g, '"token":"[REDACTED]"');
+    scrubbed = scrubbed.replace(/"ip":"[^"]+"/g, '"ip":"[ANONYMIZED]"');
+    
+    return scrubbed;
+  };
+
   return (
-    <div className="bg-[#0D1117] border border-slate-700/70 rounded-xl overflow-hidden shadow-2xl flex flex-col h-80 group">
+    <div className="bg-[#0D1117] border border-slate-700/70 rounded-xl overflow-hidden shadow-2xl flex flex-col h-80 group relative">
+      {/* Sanitize overlay glow */}
+      {isSanitized && (
+        <div className="absolute inset-0 bg-cyan-900/10 pointer-events-none mix-blend-screen z-0 animate-pulse transition-opacity"></div>
+      )}
+      
       {/* Terminal Header */}
-      <div className="bg-slate-800/80 px-4 py-2 border-b border-slate-700/70 flex items-center justify-between backdrop-blur-md">
+      <div className="bg-slate-800/80 px-4 py-2 border-b border-slate-700/70 flex flex-col sm:flex-row sm:items-center justify-between backdrop-blur-md relative z-10 gap-2">
         <div className="flex items-center gap-2">
           <TerminalIcon className="w-4 h-4 text-cyan-400" />
           <span className="text-xs font-mono font-semibold text-slate-300">live_mesh_telemetry_stream</span>
@@ -118,7 +138,26 @@ export const LiveTerminal: React.FC = () => {
             </span>
           )}
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
+           {/* Sanitize Toggle */}
+           <label className="flex items-center gap-2 cursor-pointer group/toggle">
+             <span className={`text-[10px] font-mono uppercase tracking-wider ${isSanitized ? 'text-cyan-400 font-bold' : 'text-slate-500'}`}>
+                {isSanitized ? 'Shield Active' : 'Raw Output'}
+             </span>
+             <div className="relative">
+               <input 
+                 type="checkbox" 
+                 className="sr-only" 
+                 checked={isSanitized}
+                 onChange={(e) => setIsSanitized(e.target.checked)}
+               />
+               <div className={`block w-8 h-4 rounded-full transition-colors ${isSanitized ? 'bg-cyan-500/30 border border-cyan-400/50' : 'bg-slate-700'}`}></div>
+               <div className={`dot absolute left-1 top-1 bg-white w-2 h-2 rounded-full transition-transform ${isSanitized ? 'transform translate-x-4 bg-cyan-400 shadow-[0_0_8px_rgba(6,182,212,0.8)]' : 'bg-slate-400'}`}></div>
+             </div>
+           </label>
+           
+           <div className="w-px h-4 bg-slate-700"></div>
+
            <div className="text-[10px] font-mono text-slate-500">
              {logs.length} events buffered
            </div>
@@ -133,7 +172,7 @@ export const LiveTerminal: React.FC = () => {
       </div>
 
       {/* Terminal Body */}
-      <div className="flex-1 p-4 font-mono text-[11px] sm:text-xs overflow-y-auto custom-scrollbar">
+      <div className="flex-1 p-4 font-mono text-[11px] sm:text-xs overflow-y-auto custom-scrollbar relative z-10">
         {logs.length === 0 ? (
           <div className="flex items-center justify-center h-full text-slate-500">
             <span className="animate-pulse">Listening for incoming connections on port 8080...</span>
@@ -150,7 +189,9 @@ export const LiveTerminal: React.FC = () => {
                 <div className="flex-1 flex items-center justify-between gap-4">
                   <div className="flex flex-col">
                      <span className="text-slate-300 truncate max-w-[200px] sm:max-w-md">{log.path}</span>
-                     <span className="text-slate-500 text-[10px] truncate max-w-[200px] sm:max-w-md hidden group-hover/log:block">{log.payload}</span>
+                     <span className={`text-[10px] truncate max-w-[200px] sm:max-w-md hidden group-hover/log:block ${isSanitized ? 'text-cyan-300/80 font-semibold' : 'text-slate-500'}`}>
+                        {renderPayload(log.payload)}
+                     </span>
                   </div>
                   <span className="text-slate-500 min-w-max">{log.latency}ms</span>
                 </div>

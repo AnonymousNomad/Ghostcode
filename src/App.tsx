@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import LandingPage from './pages/LandingPage';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
+import SecurityPage from './pages/SecurityPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import { ToastProvider } from './context/ToastContext';
 import ToastContainer from './components/ToastContainer';
@@ -21,6 +22,14 @@ const App: React.FC = () => {
           element={
             <ProtectedRoute>
               <DashboardPage />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/security" 
+          element={
+            <ProtectedRoute>
+              <SecurityPage />
             </ProtectedRoute>
           } 
         />
