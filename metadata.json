@@ -1,0 +1,6 @@
+{
+  "name": "GhostCode",
+  "description": "GhostCode is a revolutionary tool that automatically turns any running production service into a fully-interactive, time-traveling, 1-click clone on your local machine for seamless debugging.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
