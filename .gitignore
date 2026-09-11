@@ -1,0 +1,26 @@
+# --- Node ---
+node_modules/
+*.log
+*.pid
+root.html
+esbout.txt
+esberr.txt
+
+# --- Build output ---
+dist/
+*.tsbuildinfo
+
+# --- GhostCode runtime artifacts (regenerable via `npm run demo:clone`) ---
+engine/demo/vault/
+!engine/demo/vault/.gitkeep
+
+# --- OS / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Env ---
+.env
+.env.*
+!.env.example

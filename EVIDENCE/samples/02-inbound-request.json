@@ -1,0 +1,17 @@
+﻿{
+    "type":  "inbound_request",
+    "id":  "05cf2370-ddd6-4ee5-8613-63551cfdf96d",
+    "method":  "GET",
+    "url":  "/health",
+    "headers":  {
+                    "host":  "127.0.0.1:4504",
+                    "connection":  "keep-alive",
+                    "accept":  "*/*",
+                    "accept-language":  "*",
+                    "sec-fetch-mode":  "cors",
+                    "user-agent":  "node",
+                    "accept-encoding":  "gzip, deflate"
+                },
+    "bodyPreview":  "",
+    "at":  1788796219675
+}

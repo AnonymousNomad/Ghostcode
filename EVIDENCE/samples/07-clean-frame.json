@@ -1,0 +1,104 @@
+﻿{
+    "t":  79,
+    "stack":  [
+                  {
+                      "id":  "f0-0",
+                      "function":  "incomingRequest",
+                      "file":  "server.mjs",
+                      "line":  38,
+                      "column":  12,
+                      "isThrowSite":  false,
+                      "locals":  {
+
+                                 }
+                  },
+                  {
+                      "id":  "f0-1",
+                      "function":  "authMiddleware",
+                      "file":  "server.mjs",
+                      "line":  70,
+                      "column":  4,
+                      "isThrowSite":  false,
+                      "locals":  {
+
+                                 }
+                  },
+                  {
+                      "id":  "f0-2",
+                      "function":  "parseJwt",
+                      "file":  "server.mjs",
+                      "line":  18,
+                      "column":  8,
+                      "isThrowSite":  false,
+                      "locals":  {
+
+                                 }
+                  },
+                  {
+                      "id":  "f0-3",
+                      "function":  "validateSignature",
+                      "file":  "server.mjs",
+                      "line":  32,
+                      "column":  6,
+                      "isThrowSite":  false,
+                      "locals":  {
+
+                                 }
+                  }
+              ],
+    "heap":  [
+                 {
+                     "id":  "heap-req",
+                     "type":  "IncomingMessage",
+                     "size":  4280,
+                     "retained":  false,
+                     "preview":  "GET /health"
+                 },
+                 {
+                     "id":  "heap-res",
+                     "type":  "ServerResponse",
+                     "size":  5240,
+                     "retained":  false,
+                     "preview":  "status 200"
+                 },
+                 {
+                     "id":  "heap-tok",
+                     "type":  "String (token)",
+                     "size":  412,
+                     "retained":  false,
+                     "preview":  "[TOKEN] bearer ****",
+                     "masked":  true
+                 },
+                 {
+                     "id":  "heap-err",
+                     "type":  "Error",
+                     "size":  1024,
+                     "retained":  true,
+                     "preview":  "(no error)"
+                 }
+             ],
+    "scope":  {
+                  "req":  {
+                              "name":  "req",
+                              "type":  "object",
+                              "value":  "IncomingMessage (GET /health)",
+                              "references":  [
+                                                 "heap-req"
+                                             ]
+                          },
+                  "res":  {
+                              "name":  "res",
+                              "type":  "object",
+                              "value":  "ServerResponse (status 200)",
+                              "references":  [
+                                                 "heap-res"
+                                             ]
+                          },
+                  "next":  {
+                               "name":  "next",
+                               "type":  "function",
+                               "value":  "fn (next middleware)"
+                           }
+              },
+    "log":  "GET /health -\u003e 200 (2ms)"
+}

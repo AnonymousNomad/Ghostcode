@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "node --test tests/phase3.test.mjs tests/clone-engine.test.mjs",
+    "typecheck": "tsc --noEmit",
+    "demo:clone": "node engine/bin/integration-test.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",

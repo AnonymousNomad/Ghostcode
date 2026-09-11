@@ -1,0 +1,635 @@
+{
+  "id": 1,
+  "name": "auth-api-clone",
+  "created_at": "2026-09-07T15:50:19.596Z",
+  "size_mb": 0.18,
+  "serviceUrl": "http://127.0.0.1:4504",
+  "environment": "production",
+  "authType": "bearer",
+  "localPort": 4504,
+  "details": {
+    "service": "auth-api",
+    "captureDepth": "full",
+    "includeEnvVars": true,
+    "sanitizePii": true,
+    "localPort": 4504,
+    "state": {
+      "env": {
+        "ACSetupSvcPort": "23210",
+        "AGENT": "1",
+        "AIDE_LLAMA_SERVER_VULKAN": "E:\\llama-cpp-vulkan\\llama-server.exe",
+        "ALLUSERSPROFILE": "C:\\ProgramData",
+        "APPDATA": "C:\\Users\\Grey_\\AppData\\Roaming",
+        "CommonProgramFiles": "C:\\Program Files\\Common Files",
+        "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+        "CommonProgramW6432": "C:\\Program Files\\Common Files",
+        "COMPUTERNAME": "NEURO-MIRROR",
+        "ComSpec": "C:\\WINDOWS\\system32\\cmd.exe",
+        "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+        "EnableLog": "INFO",
+        "HERMES_GIT_BASH_PATH": "C:\\Program Files\\Git\\bin\\bash.exe",
+        "HF_TOKEN": "[REDACTED]",
+        "HOMEDRIVE": "C:",
+        "HOMEPATH": "\\Users\\Grey_",
+        "LOCALAPPDATA": "C:\\Users\\Grey_\\AppData\\Local",
+        "LOGONSERVER": "\\\\NEURO-MIRROR",
+        "npm_config_user_agent": "npm/undefined node/v24.3.0 win32 x64 workspaces/false",
+        "NUMBER_OF_PROCESSORS": "12",
+        "OneDrive": "C:\\Users\\Grey_\\OneDrive",
+        "OPENCODE": "1",
+        "OPENCODE_PID": "17936",
+        "OS": "Windows_NT",
+        "Path": "E:\\LOREIN;\"E:\\C;\\Program Files\\NVIDIA Corporation\\bin\";E:\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\iCLS\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files\\dotnet\\;C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\;E:\\Tailscale\\;C:\\Program Files\\NVIDIA Corporation\\Nsight Compute 2026.1.1\\;C:\\Program Files\\Git\\cmd;C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\;C:\\Program Files\\Tailscale\\;C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v13.2\\bin;C:\\Program Files\\GitHub CLI\\;C:\\Users\\Grey_\\.local\\bin;C:\\Users\\Grey_\\.minimax\\bin;E:\\nodejs\\node-v26.4.0-win-x64",
+        "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL",
+        "PIP_CACHE_DIR": "E:\\pip_cache",
+        "PORT": "4504",
+        "PROCESSOR_ARCHITECTURE": "AMD64",
+        "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+        "PROCESSOR_LEVEL": "6",
+        "PROCESSOR_REVISION": "9e0a",
+        "ProgramData": "C:\\ProgramData",
+        "ProgramFiles": "C:\\Program Files",
+        "ProgramFiles(x86)": "C:\\Program Files (x86)",
+        "ProgramW6432": "C:\\Program Files",
+        "PROMPT": "$P$G",
+        "PSModulePath": "C:\\Users\\Grey_\\OneDrive\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+        "PUBLIC": "C:\\Users\\Public",
+        "RlsSvcPort": "22112",
+        "SESSIONNAME": "Console",
+        "SystemDrive": "C:",
+        "SystemRoot": "C:\\WINDOWS",
+        "TEMP": "E:\\pip_temp",
+        "TMP": "E:\\pip_temp",
+        "USERDOMAIN": "NEURO-MIRROR",
+        "USERDOMAIN_ROAMINGPROFILE": "NEURO-MIRROR",
+        "USERNAME": "Grey_",
+        "USERPROFILE": "C:\\Users\\Grey_",
+        "windir": "C:\\WINDOWS",
+        "WSLENV": "WT_SESSION:WT_PROFILE_ID:",
+        "WT_PROFILE_ID": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "WT_SESSION": "5c0ff5e4-4630-40a8-af6a-6bfc1bd219ea"
+      },
+      "logs": [
+        "[79ms] GET /health -> 200 (2ms)",
+        "[102ms] GET /api/auth/login -> 401 (0ms)",
+        "[233ms] GET /api/auth/login -> 401 (0ms)",
+        "[360ms] GET /api/auth/login -> 401 (0ms)",
+        "[485ms] GET /api/auth/login -> 401 (0ms)"
+      ],
+      "snapshot": {
+        "capturedAt": 1788796219596,
+        "durationMs": 485,
+        "frames": [
+          {
+            "t": 79,
+            "stack": [
+              {
+                "id": "f0-0",
+                "function": "incomingRequest",
+                "file": "server.mjs",
+                "line": 38,
+                "column": 12,
+                "isThrowSite": false,
+                "locals": {}
+              },
+              {
+                "id": "f0-1",
+                "function": "authMiddleware",
+                "file": "server.mjs",
+                "line": 70,
+                "column": 4,
+                "isThrowSite": false,
+                "locals": {}
+              },
+              {
+                "id": "f0-2",
+                "function": "parseJwt",
+                "file": "server.mjs",
+                "line": 18,
+                "column": 8,
+                "isThrowSite": false,
+                "locals": {}
+              },
+              {
+                "id": "f0-3",
+                "function": "validateSignature",
+                "file": "server.mjs",
+                "line": 32,
+                "column": 6,
+                "isThrowSite": false,
+                "locals": {}
+              }
+            ],
+            "heap": [
+              {
+                "id": "heap-req",
+                "type": "IncomingMessage",
+                "size": 4280,
+                "retained": false,
+                "preview": "GET /health"
+              },
+              {
+                "id": "heap-res",
+                "type": "ServerResponse",
+                "size": 5240,
+                "retained": false,
+                "preview": "status 200"
+              },
+              {
+                "id": "heap-tok",
+                "type": "String (token)",
+                "size": 412,
+                "retained": false,
+                "preview": "[TOKEN] bearer ****",
+                "masked": true
+              },
+              {
+                "id": "heap-err",
+                "type": "Error",
+                "size": 1024,
+                "retained": true,
+                "preview": "(no error)"
+              }
+            ],
+            "scope": {
+              "req": {
+                "name": "req",
+                "type": "object",
+                "value": "IncomingMessage (GET /health)",
+                "references": [
+                  "heap-req"
+                ]
+              },
+              "res": {
+                "name": "res",
+                "type": "object",
+                "value": "ServerResponse (status 200)",
+                "references": [
+                  "heap-res"
+                ]
+              },
+              "next": {
+                "name": "next",
+                "type": "function",
+                "value": "fn (next middleware)"
+              }
+            },
+            "log": "GET /health -> 200 (2ms)"
+          },
+          {
+            "t": 102,
+            "stack": [
+              {
+                "id": "f1-0",
+                "function": "incomingRequest",
+                "file": "server.mjs",
+                "line": 38,
+                "column": 12,
+                "isThrowSite": true,
+                "locals": {}
+              },
+              {
+                "id": "f1-1",
+                "function": "authMiddleware",
+                "file": "server.mjs",
+                "line": 70,
+                "column": 4,
+                "isThrowSite": true,
+                "locals": {}
+              },
+              {
+                "id": "f1-2",
+                "function": "parseJwt",
+                "file": "server.mjs",
+                "line": 18,
+                "column": 8,
+                "isThrowSite": false,
+                "locals": {}
+              },
+              {
+                "id": "f1-3",
+                "function": "validateSignature",
+                "file": "server.mjs",
+                "line": 32,
+                "column": 6,
+                "isThrowSite": false,
+                "locals": {}
+              }
+            ],
+            "heap": [
+              {
+                "id": "heap-req",
+                "type": "IncomingMessage",
+                "size": 4280,
+                "retained": false,
+                "preview": "GET /api/auth/login"
+              },
+              {
+                "id": "heap-res",
+                "type": "ServerResponse",
+                "size": 5240,
+                "retained": false,
+                "preview": "status 401"
+              },
+              {
+                "id": "heap-tok",
+                "type": "String (token)",
+                "size": 412,
+                "retained": false,
+                "preview": "[TOKEN] bearer ****",
+                "masked": true
+              },
+              {
+                "id": "heap-err",
+                "type": "Error",
+                "size": 1024,
+                "retained": true,
+                "preview": "JsonWebTokenError: invalid signature"
+              }
+            ],
+            "scope": {
+              "req": {
+                "name": "req",
+                "type": "object",
+                "value": "IncomingMessage (GET /api/auth/login)",
+                "references": [
+                  "heap-req"
+                ]
+              },
+              "res": {
+                "name": "res",
+                "type": "object",
+                "value": "ServerResponse (status 401)",
+                "references": [
+                  "heap-res"
+                ]
+              },
+              "next": {
+                "name": "next",
+                "type": "function",
+                "value": "fn (next middleware)"
+              },
+              "err": {
+                "name": "err",
+                "type": "object",
+                "value": "JsonWebTokenError: invalid signature",
+                "references": [
+                  "heap-err"
+                ]
+              }
+            },
+            "log": "GET /api/auth/login -> 401 (0ms)"
+          },
+          {
+            "t": 233,
+            "stack": [
+              {
+                "id": "f2-0",
+                "function": "incomingRequest",
+                "file": "server.mjs",
+                "line": 38,
+                "column": 12,
+                "isThrowSite": true,
+                "locals": {}
+              },
+              {
+                "id": "f2-1",
+                "function": "authMiddleware",
+                "file": "server.mjs",
+                "line": 70,
+                "column": 4,
+                "isThrowSite": true,
+                "locals": {}
+              },
+              {
+                "id": "f2-2",
+                "function": "parseJwt",
+                "file": "server.mjs",
+                "line": 18,
+                "column": 8,
+                "isThrowSite": false,
+                "locals": {}
+              },
+              {
+                "id": "f2-3",
+                "function": "validateSignature",
+                "file": "server.mjs",
+                "line": 32,
+                "column": 6,
+                "isThrowSite": false,
+                "locals": {}
+              }
+            ],
+            "heap": [
+              {
+                "id": "heap-req",
+                "type": "IncomingMessage",
+                "size": 4280,
+                "retained": false,
+                "preview": "GET /api/auth/login"
+              },
+              {
+                "id": "heap-res",
+                "type": "ServerResponse",
+                "size": 5240,
+                "retained": false,
+                "preview": "status 401"
+              },
+              {
+                "id": "heap-tok",
+                "type": "String (token)",
+                "size": 412,
+                "retained": false,
+                "preview": "[TOKEN] bearer ****",
+                "masked": true
+              },
+              {
+                "id": "heap-err",
+                "type": "Error",
+                "size": 1024,
+                "retained": true,
+                "preview": "JsonWebTokenError: invalid signature"
+              }
+            ],
+            "scope": {
+              "req": {
+                "name": "req",
+                "type": "object",
+                "value": "IncomingMessage (GET /api/auth/login)",
+                "references": [
+                  "heap-req"
+                ]
+              },
+              "res": {
+                "name": "res",
+                "type": "object",
+                "value": "ServerResponse (status 401)",
+                "references": [
+                  "heap-res"
+                ]
+              },
+              "next": {
+                "name": "next",
+                "type": "function",
+                "value": "fn (next middleware)"
+              },
+              "token": {
+                "name": "token",
+                "type": "string",
+                "value": "[TOKEN] bearer ****",
+                "size": 412,
+                "masked": true,
+                "references": [
+                  "heap-tok"
+                ]
+              },
+              "err": {
+                "name": "err",
+                "type": "object",
+                "value": "JsonWebTokenError: invalid signature",
+                "references": [
+                  "heap-err"
+                ]
+              }
+            },
+            "log": "GET /api/auth/login -> 401 (0ms)"
+          },
+          {
+            "t": 360,
+            "stack": [
+              {
+                "id": "f3-0",
+                "function": "incomingRequest",
+                "file": "server.mjs",
+                "line": 38,
+                "column": 12,
+                "isThrowSite": true,
+                "locals": {}
+              },
+              {
+                "id": "f3-1",
+                "function": "authMiddleware",
+                "file": "server.mjs",
+                "line": 70,
+                "column": 4,
+                "isThrowSite": true,
+                "locals": {}
+              },
+              {
+                "id": "f3-2",
+                "function": "parseJwt",
+                "file": "server.mjs",
+                "line": 18,
+                "column": 8,
+                "isThrowSite": false,
+                "locals": {}
+              },
+              {
+                "id": "f3-3",
+                "function": "validateSignature",
+                "file": "server.mjs",
+                "line": 32,
+                "column": 6,
+                "isThrowSite": false,
+                "locals": {}
+              }
+            ],
+            "heap": [
+              {
+                "id": "heap-req",
+                "type": "IncomingMessage",
+                "size": 4280,
+                "retained": false,
+                "preview": "GET /api/auth/login"
+              },
+              {
+                "id": "heap-res",
+                "type": "ServerResponse",
+                "size": 5240,
+                "retained": false,
+                "preview": "status 401"
+              },
+              {
+                "id": "heap-tok",
+                "type": "String (token)",
+                "size": 412,
+                "retained": false,
+                "preview": "[TOKEN] bearer ****",
+                "masked": true
+              },
+              {
+                "id": "heap-err",
+                "type": "Error",
+                "size": 1024,
+                "retained": true,
+                "preview": "JsonWebTokenError: invalid signature"
+              }
+            ],
+            "scope": {
+              "req": {
+                "name": "req",
+                "type": "object",
+                "value": "IncomingMessage (GET /api/auth/login)",
+                "references": [
+                  "heap-req"
+                ]
+              },
+              "res": {
+                "name": "res",
+                "type": "object",
+                "value": "ServerResponse (status 401)",
+                "references": [
+                  "heap-res"
+                ]
+              },
+              "next": {
+                "name": "next",
+                "type": "function",
+                "value": "fn (next middleware)"
+              },
+              "token": {
+                "name": "token",
+                "type": "string",
+                "value": "[TOKEN] bearer ****",
+                "size": 412,
+                "masked": true,
+                "references": [
+                  "heap-tok"
+                ]
+              },
+              "err": {
+                "name": "err",
+                "type": "object",
+                "value": "JsonWebTokenError: invalid signature",
+                "references": [
+                  "heap-err"
+                ]
+              }
+            },
+            "log": "GET /api/auth/login -> 401 (0ms)"
+          },
+          {
+            "t": 485,
+            "stack": [
+              {
+                "id": "f4-0",
+                "function": "incomingRequest",
+                "file": "server.mjs",
+                "line": 38,
+                "column": 12,
+                "isThrowSite": true,
+                "locals": {}
+              },
+              {
+                "id": "f4-1",
+                "function": "authMiddleware",
+                "file": "server.mjs",
+                "line": 70,
+                "column": 4,
+                "isThrowSite": true,
+                "locals": {}
+              },
+              {
+                "id": "f4-2",
+                "function": "parseJwt",
+                "file": "server.mjs",
+                "line": 18,
+                "column": 8,
+                "isThrowSite": false,
+                "locals": {}
+              },
+              {
+                "id": "f4-3",
+                "function": "validateSignature",
+                "file": "server.mjs",
+                "line": 32,
+                "column": 6,
+                "isThrowSite": false,
+                "locals": {}
+              }
+            ],
+            "heap": [
+              {
+                "id": "heap-req",
+                "type": "IncomingMessage",
+                "size": 4280,
+                "retained": false,
+                "preview": "GET /api/auth/login"
+              },
+              {
+                "id": "heap-res",
+                "type": "ServerResponse",
+                "size": 5240,
+                "retained": false,
+                "preview": "status 401"
+              },
+              {
+                "id": "heap-tok",
+                "type": "String (token)",
+                "size": 412,
+                "retained": false,
+                "preview": "[TOKEN] bearer ****",
+                "masked": true
+              },
+              {
+                "id": "heap-err",
+                "type": "Error",
+                "size": 1024,
+                "retained": true,
+                "preview": "JsonWebTokenError: invalid signature"
+              }
+            ],
+            "scope": {
+              "req": {
+                "name": "req",
+                "type": "object",
+                "value": "IncomingMessage (GET /api/auth/login)",
+                "references": [
+                  "heap-req"
+                ]
+              },
+              "res": {
+                "name": "res",
+                "type": "object",
+                "value": "ServerResponse (status 401)",
+                "references": [
+                  "heap-res"
+                ]
+              },
+              "next": {
+                "name": "next",
+                "type": "function",
+                "value": "fn (next middleware)"
+              },
+              "token": {
+                "name": "token",
+                "type": "string",
+                "value": "[TOKEN] bearer ****",
+                "size": 412,
+                "masked": true,
+                "references": [
+                  "heap-tok"
+                ]
+              },
+              "err": {
+                "name": "err",
+                "type": "object",
+                "value": "JsonWebTokenError: invalid signature",
+                "references": [
+                  "heap-err"
+                ]
+              }
+            },
+            "log": "GET /api/auth/login -> 401 (0ms)"
+          }
+        ],
+        "stats": {
+          "frameCount": 5,
+          "allocationCount": 4,
+          "totalHeapBytes": 54780,
+          "throwSiteAt": 102
+        }
+      }
+    }
+  }
+}

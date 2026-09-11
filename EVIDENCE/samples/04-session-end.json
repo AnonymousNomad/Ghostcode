@@ -1,0 +1,8 @@
+{
+  "type": "session_end",
+  "at": 1757248819123,
+  "counts": {
+    "requests": 5,
+    "errors": 1
+  }
+}

@@ -1,0 +1,23 @@
+﻿Γ£ö engine components exist (4.4819ms)
+Γ£ö last integration test produced a ghost (4.3357ms)
+Γ£ö vault file is JSONL (one event per line) (1.9457ms)
+Γ£ö email is masked (5.9885ms)
+Γ£ö credit card (Luhn-valid) is masked (0.8353ms)
+Γ£ö non-Luhn digits are NOT masked (0.3922ms)
+Γ£ö bearer token is masked (0.7947ms)
+Γ£ö GitHub PAT is masked (0.4784ms)
+Γ£ö phone (E.164) is masked (0.3132ms)
+Γ£ö SSN is masked (0.2522ms)
+Γ£ö IPv4 is NOT masked (disabled by default) (0.2486ms)
+Γ£ö scrubObject recurses (0.9579ms)
+Γ£ö mock timeline has 60 frames (3.6583ms)
+Γ£ö inspector components exist (3.1929ms)
+Γä╣ tests 14
+Γä╣ suites 0
+Γä╣ pass 14
+Γä╣ fail 0
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 283.4651
+

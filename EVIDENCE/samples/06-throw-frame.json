@@ -1,0 +1,112 @@
+﻿{
+    "t":  102,
+    "stack":  [
+                  {
+                      "id":  "f1-0",
+                      "function":  "incomingRequest",
+                      "file":  "server.mjs",
+                      "line":  38,
+                      "column":  12,
+                      "isThrowSite":  true,
+                      "locals":  {
+
+                                 }
+                  },
+                  {
+                      "id":  "f1-1",
+                      "function":  "authMiddleware",
+                      "file":  "server.mjs",
+                      "line":  70,
+                      "column":  4,
+                      "isThrowSite":  true,
+                      "locals":  {
+
+                                 }
+                  },
+                  {
+                      "id":  "f1-2",
+                      "function":  "parseJwt",
+                      "file":  "server.mjs",
+                      "line":  18,
+                      "column":  8,
+                      "isThrowSite":  false,
+                      "locals":  {
+
+                                 }
+                  },
+                  {
+                      "id":  "f1-3",
+                      "function":  "validateSignature",
+                      "file":  "server.mjs",
+                      "line":  32,
+                      "column":  6,
+                      "isThrowSite":  false,
+                      "locals":  {
+
+                                 }
+                  }
+              ],
+    "heap":  [
+                 {
+                     "id":  "heap-req",
+                     "type":  "IncomingMessage",
+                     "size":  4280,
+                     "retained":  false,
+                     "preview":  "GET /api/auth/login"
+                 },
+                 {
+                     "id":  "heap-res",
+                     "type":  "ServerResponse",
+                     "size":  5240,
+                     "retained":  false,
+                     "preview":  "status 401"
+                 },
+                 {
+                     "id":  "heap-tok",
+                     "type":  "String (token)",
+                     "size":  412,
+                     "retained":  false,
+                     "preview":  "[TOKEN] bearer ****",
+                     "masked":  true
+                 },
+                 {
+                     "id":  "heap-err",
+                     "type":  "Error",
+                     "size":  1024,
+                     "retained":  true,
+                     "preview":  "JsonWebTokenError: invalid signature"
+                 }
+             ],
+    "scope":  {
+                  "req":  {
+                              "name":  "req",
+                              "type":  "object",
+                              "value":  "IncomingMessage (GET /api/auth/login)",
+                              "references":  [
+                                                 "heap-req"
+                                             ]
+                          },
+                  "res":  {
+                              "name":  "res",
+                              "type":  "object",
+                              "value":  "ServerResponse (status 401)",
+                              "references":  [
+                                                 "heap-res"
+                                             ]
+                          },
+                  "next":  {
+                               "name":  "next",
+                               "type":  "function",
+                               "value":  "fn (next middleware)"
+                           },
+                  "err":  {
+                              "name":  "err",
+                              "type":  "object",
+                              "value":  "JsonWebTokenError: invalid signature",
+                              "references":  [
+                                                 "heap-err"
+                                             ]
+                          }
+              },
+    "log":  "GET /api/auth/login -\u003e 401 (0ms)"
+}

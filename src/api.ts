@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { Ghost, AuthType, AuthCredentials, ConnectionProbeResult, OneClickCloneConfig } from './types';
+import { generateAuthBugSnapshot } from './lib/mockTimeline';
 
 const api = axios.create({
   baseURL: '/api' // This will be proxied by Vite dev server
@@ -125,35 +126,41 @@ export const fetchGhostById = async (ghostId: number): Promise<Ghost> => {
 
   // Generate a realistic snapshot if not found
   const mockName = `ghost-session-${ghostId}`;
+  const snapshot = generateAuthBugSnapshot();
   return {
     id: ghostId,
     name: mockName,
     created_at: new Date(Date.now() - 3600000).toISOString(),
-    size_mb: ((ghostId * 37) % 200) + 50,
+    size_mb: Math.round(snapshot.stats.totalHeapBytes / 1024 / 1024 * 10) / 10 + 80,
     serviceUrl: `https://prod-service-${ghostId}.internal:8443`,
     environment: 'production',
     authType: 'bearer',
     localPort: 3000 + (ghostId % 1000),
     details: {
-      service: `service-cluster-${ghostId}`,
+      service: `auth-cluster-${ghostId}`,
       captureDepth: 'full',
       includeEnvVars: true,
       sanitizePii: true,
+      localPort: 3000 + (ghostId % 1000),
       state: {
         env: {
           "NODE_ENV": "production",
           "DATABASE_URL": "postgres://user:pass@prod-db:5432/users",
           "CACHE_HOST": "redis-prod:6379",
           "API_VERSION": "v3.1.4",
-          "REQUEST_ID": `req-${ghostId}-abc`
+          "REQUEST_ID": `req-${ghostId}-abc`,
+          "JWT_SECRET": "[REDACTED]"
         },
         logs: [
           "2026-09-06T10:00:01Z [INFO] - Live service instance frozen for zero-downtime clone...",
           `2026-09-06T10:00:05Z [INFO] - Mirroring TLS state and credentials for session ${ghostId}`,
           "2026-09-06T10:00:06Z [WARN] - Sanitizing PII in active memory allocations",
+          "2026-09-06T10:00:07Z [INFO] - Capturing JWT verification trace for /api/auth/login",
+          "2026-09-06T10:00:08Z [ERROR] - JsonWebTokenError: invalid signature",
           "2026-09-06T10:00:08Z [SUCCESS] - 1-Click clone active on local debugging bridge"
         ],
-        memoryDump: `[Heap Snapshot]\nAddress: 0x${(ghostId * 12345).toString(16)}\nSize: 74.2 MB\nAllocations: 45,920 objects`
+        memoryDump: `[Heap Snapshot]\nAddress: 0x${(ghostId * 12345).toString(16)}\nSize: ${snapshot.stats.totalHeapBytes} bytes\nAllocations: 7 high-level objects tracked across 60 frames`,
+        snapshot
       }
     }
   };

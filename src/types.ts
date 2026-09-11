@@ -56,7 +56,8 @@ export interface Ghost {
     state: {
       env: Record<string, string>;
       logs: string[];
-      memoryDump: string;
+      memoryDump?: string;
+      snapshot?: import('./types/inspector').MemorySnapshot;
     }
   }
 }
